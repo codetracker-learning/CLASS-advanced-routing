@@ -9,7 +9,7 @@ export default function Card({ card }) {
         <div className="card-body">
           <h5 className="card-title">{card.title}</h5>
           <p className="card-text">{card.description}</p>
-          <Link to={`/edit/${card.id}`} className="btn btn-primary">
+          <Link to={`/edit/${card.firebaseKey}`} className="btn btn-primary">
             Details
           </Link>
         </div>
