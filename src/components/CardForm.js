@@ -13,7 +13,7 @@ export default function CardForm({ obj }) {
   const history = useHistory();
 
   useEffect(() => {
-    if (obj?.firebaseKey) {
+    if (obj.firebaseKey) {
       setFormInput(obj);
     } else {
       setFormInput(initialState);
