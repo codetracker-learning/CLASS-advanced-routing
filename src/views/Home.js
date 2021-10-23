@@ -16,10 +16,19 @@ export default function Home() {
   });
 
   return (
-    <div>
-      {cards
-        ? cards.map((card) => <Card key={card.firebaseKey} card={card} />)
-        : 'Add a card'}
+    <div className="container">
+      {cards ? (
+        <>
+          <h1 className="text-center">All Cards</h1>
+          <div className="d-flex flex-wrap">
+            {cards.map((card) => (
+              <Card key={card.firebaseKey} card={card} />
+            ))}
+          </div>
+        </>
+      ) : (
+        'Add a card'
+      )}
     </div>
   );
 }
